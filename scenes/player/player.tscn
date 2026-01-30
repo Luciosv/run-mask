@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bacgna3cdssj0"]
+
+[ext_resource type="Script" uid="uid://c13wu7a8igngl" path="res://Ultimate-Platformer-Controller-2D-7d373d80eddabdd85576d4b4deac9ecb473dc63e/UltimatePlatformerController.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://dobaitnou1hjc" path="res://art/assets_previos/character_green_front.png" id="2_dovo2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmlin"]
+radius = 31.0
+height = 94.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvxji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dovo2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=234454025 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
+collision_mask = 6
+platform_floor_layers = 4294967041
+script = ExtResource("1_dovo2")
+PlayerSprite = NodePath("Sprite2D")
+PlayerCollider = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426527528]
+position = Vector2(0, 13)
+shape = SubResource("CapsuleShape2D_gmlin")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1582531959]
+sprite_frames = SubResource("SpriteFrames_lvxji")
