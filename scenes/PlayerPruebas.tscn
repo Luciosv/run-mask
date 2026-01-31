@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cjfejhgapom6g" path="res://art/Sprites/Diseño sin título (9).png" id="8_pjdnx"]
 [ext_resource type="PackedScene" uid="uid://bacgna3cdssj0" path="res://scenes/player/player.tscn" id="9_rmbnr"]
 [ext_resource type="PackedScene" uid="uid://dp20uee87x730" path="res://scenes/Enemies/red_enemy.tscn" id="10_el1vc"]
+[ext_resource type="PackedScene" uid="uid://djop12j4o3nes" path="res://prefabs/player.tscn" id="11_exj0r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67o6f"]
 texture = ExtResource("1_h6ve0")
@@ -3210,3 +3211,6 @@ correctionAmount = 1.2
 
 [node name="RedEnemy" parent="." unique_id=190207833 instance=ExtResource("10_el1vc")]
 position = Vector2(283.12506, 90.62501)
+
+[node name="Animations2" parent="." unique_id=1606225793 instance=ExtResource("11_exj0r")]
+position = Vector2(100.31252, 280.62506)
