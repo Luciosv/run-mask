@@ -4671,7 +4671,7 @@ tile_map_data = PackedByteArray("AAAMACUAAAABAAAAABALACUAAAACAAAAABAKACUAAAADAAA
 tile_set = SubResource("TileSet_6yjpi")
 
 [node name="Player" parent="." unique_id=234454025 instance=ExtResource("5_cq4me")]
-position = Vector2(331, 636)
+position = Vector2(3209, 253.99997)
 scale = Vector2(0.35, 0.35)
 max_speed = 550.0
 acceleration = 2000.0
@@ -4690,12 +4690,22 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(1789, -311)
 scale = Vector2(0.5, 0.5)
 
-[node name="GreenEnemy" parent="Enemies" unique_id=323755692 instance=ExtResource("7_ckvwl")]
-position = Vector2(2856, 90)
+[node name="GreenEnemy" parent="Enemies" unique_id=323755692 node_paths=PackedStringArray("origin") instance=ExtResource("7_ckvwl")]
+position = Vector2(2857, 256)
+scale = Vector2(0.6, 0.6)
+swing_angle = 50.0
+origin = NodePath("../Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="Enemies" unique_id=1084111070]
+position = Vector2(2851, -71)
 scale = Vector2(0.6, 0.6)
 
 [node name="GreenEnemy2" parent="Enemies" unique_id=2082776006 instance=ExtResource("7_ckvwl")]
 position = Vector2(3140, -775)
+scale = Vector2(0.6, 0.6)
+
+[node name="Marker2D2" type="Marker2D" parent="Enemies" unique_id=1146957824]
+position = Vector2(3147, -901)
 scale = Vector2(0.6, 0.6)
 
 [node name="BlueEnemy" parent="Enemies" unique_id=2087932859 instance=ExtResource("8_nlqja")]
