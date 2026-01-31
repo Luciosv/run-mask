@@ -74,7 +74,11 @@ func _handle_horizontal(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, target_speed, accel * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
-
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+	elif velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	
 
 # =========================
 # === SALTO ===============
