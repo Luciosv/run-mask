@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bvgalmxiut42u"]
+[gd_scene format=4 uid="uid://bsl86rur3fjhb"]
 
 [ext_resource type="Texture2D" uid="uid://dt0ix3umnjfva" path="res://art/Sprites/Background.png" id="1_h6ve0"]
 [ext_resource type="Texture2D" uid="uid://okhyvt44jc76" path="res://art/Sprites/Block11.png" id="2_exj0r"]
@@ -3196,18 +3196,10 @@ frame_progress = 0.8471852
 
 [node name="Player" parent="." unique_id=234454025 instance=ExtResource("9_rmbnr")]
 position = Vector2(100.625015, 279.06253)
-maxSpeed = 300.0
-directionalSnap = true
-jumpHeight = 5.0
-gravityScale = 9.0
-terminalVelocity = 650.0
-coyoteTime = 0.12
-jumpBuffering = 0.12
-wallJump = true
-inputPauseAfterWallJump = 0.033
-dashType = 1
-dashLength = 2.0
-correctionAmount = 1.2
+max_speed = 300.0
+air_control = 1.2
+jump_height = 150.0
+fall_gravity_multiplier = 1.7
 
 [node name="RedEnemy" parent="." unique_id=190207833 instance=ExtResource("10_el1vc")]
 position = Vector2(283.12506, 90.62501)

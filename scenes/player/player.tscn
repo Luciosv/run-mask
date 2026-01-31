@@ -1,23 +1,52 @@
 [gd_scene format=3 uid="uid://bacgna3cdssj0"]
 
 [ext_resource type="Script" uid="uid://oeumuoecslfc" path="res://scripts/player/player.gd" id="1_dovo2"]
-[ext_resource type="Texture2D" uid="uid://dslgcgopyg55a" path="res://art/Sprites/RedEnemy.png" id="2_dovo2"]
+[ext_resource type="Texture2D" uid="uid://byweqxklmlwqs" path="res://art/Sprites/PlayerIDLE.png" id="2_dovo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmlin"]
-radius = 7.0
-height = 36.0
+radius = 57.0
+height = 328.0
 
-[node name="Player" type="CharacterBody2D" unique_id=234454025 node_paths=PackedStringArray("PlayerSprite", "PlayerCollider")]
-collision_mask = 6
-platform_floor_layers = 4294967041
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(0, 0, 177, 332)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(177, 0, 177, 332)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p47bc"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(354, 0, 177, 332)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75vfm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmlin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvxji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p47bc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=234454025]
+collision_mask = 4
+platform_floor_layers = 4294967044
 script = ExtResource("1_dovo2")
-PlayerSprite = NodePath("Animations")
-PlayerCollider = NodePath("CollisionShape2D")
-jump = true
-idle = true
-falling = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426527528]
 shape = SubResource("CapsuleShape2D_gmlin")
 
-[node name="Animations" parent="." unique_id=1606225793 instance=ExtResource("2_dovo2")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1921289559]
+sprite_frames = SubResource("SpriteFrames_75vfm")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=262931435]
