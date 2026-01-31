@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bacgna3cdssj0"]
 
-[ext_resource type="Script" uid="uid://c13wu7a8igngl" path="res://Ultimate-Platformer-Controller-2D-7d373d80eddabdd85576d4b4deac9ecb473dc63e/UltimatePlatformerController.gd" id="1_dovo2"]
-[ext_resource type="PackedScene" uid="uid://djop12j4o3nes" path="res://prefabs/player.tscn" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://oeumuoecslfc" path="res://scripts/player/player.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://dslgcgopyg55a" path="res://art/Sprites/RedEnemy.png" id="2_dovo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmlin"]
 radius = 7.0
