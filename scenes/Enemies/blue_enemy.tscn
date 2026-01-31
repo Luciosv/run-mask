@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c2wwu61l344gc"]
+
+[ext_resource type="Script" uid="uid://j4styvmg3tee" path="res://scripts/enemy/blue_enemy.gd" id="1_k5bnt"]
+[ext_resource type="Texture2D" uid="uid://c0iajnfc7u6hi" path="res://art/Sprites/BlueEnemyH.png" id="2_7daao"]
+[ext_resource type="Texture2D" uid="uid://xoobtaohqwxa" path="res://art/Sprites/BlueEnemyIDLE.png" id="3_vm2au"]
+[ext_resource type="Texture2D" uid="uid://d1qmsou4gsf8h" path="res://art/Sprites/BlueEnemyV.png" id="4_2huhl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co0c6"]
+atlas = ExtResource("2_7daao")
+region = Rect2(0, 0, 615, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qj6g"]
+atlas = ExtResource("2_7daao")
+region = Rect2(0, 126, 615, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojgse"]
+atlas = ExtResource("3_vm2au")
+region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uli2u"]
+atlas = ExtResource("3_vm2au")
+region = Rect2(240, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i01ws"]
+atlas = ExtResource("3_vm2au")
+region = Rect2(480, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx8k3"]
+atlas = ExtResource("4_2huhl")
+region = Rect2(0, 0, 153, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cokvo"]
+atlas = ExtResource("4_2huhl")
+region = Rect2(153, 0, 153, 344)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gduht"]
+animations = [{
+"frames": [{
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_co0c6")
+}, {
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_0qj6g")
+}],
+"loop": true,
+"name": &"BlueH",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_ojgse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uli2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i01ws")
+}],
+"loop": true,
+"name": &"BlueIDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_qx8k3")
+}, {
+"duration": 1.6,
+"texture": SubResource("AtlasTexture_cokvo")
+}],
+"loop": true,
+"name": &"BlueV",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5bnt"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7daao"]
+radius = 178.71765
+
+[node name="BlueEnemy" type="CharacterBody2D" unique_id=2087932859]
+script = ExtResource("1_k5bnt")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1567321002]
+scale = Vector2(0.17718251, 0.17718251)
+sprite_frames = SubResource("SpriteFrames_gduht")
+animation = &"BlueIDLE"
+autoplay = "BlueIDLE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=643369506]
+shape = SubResource("CircleShape2D_k5bnt")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=963177588]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=255626599]
+shape = SubResource("CircleShape2D_7daao")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1074111387]
+path_postprocessing = 1

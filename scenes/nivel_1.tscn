@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://okhyvt44jc76" path="res://art/Sprites/Block11.png" id="2_gq86h"]
 [ext_resource type="Texture2D" uid="uid://14fdmvel5nm5" path="res://art/Sprites/Arc.png" id="3_hrsa5"]
 [ext_resource type="Texture2D" uid="uid://bph6deinsjg5h" path="res://art/Sprites/WhatsApp Image 2026-01-30 at 20.17.51.jpeg" id="4_0pjdr"]
-[ext_resource type="Texture2D" uid="uid://d1qmsou4gsf8h" path="res://art/Sprites/BlueEnemyV.png" id="6_31big"]
-[ext_resource type="Texture2D" uid="uid://xoobtaohqwxa" path="res://art/Sprites/BlueEnemyIDLE.png" id="7_gnqo2"]
-[ext_resource type="Texture2D" uid="uid://c0iajnfc7u6hi" path="res://art/Sprites/BlueEnemyH.png" id="9_851hy"]
 [ext_resource type="Texture2D" uid="uid://cjfejhgapom6g" path="res://art/Sprites/Diseño sin título (9).png" id="10_31big"]
 [ext_resource type="PackedScene" uid="uid://bacgna3cdssj0" path="res://scenes/player/player.tscn" id="10_gnqo2"]
 [ext_resource type="PackedScene" uid="uid://dp20uee87x730" path="res://scenes/Enemies/red_enemy.tscn" id="10_vwgcu"]
@@ -3041,73 +3038,6 @@ texture = ExtResource("4_0pjdr")
 [sub_resource type="TileSet" id="TileSet_yc8pd"]
 sources/0 = SubResource("TileSetAtlasSource_851hy")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_co0c6"]
-atlas = ExtResource("9_851hy")
-region = Rect2(0, 0, 615, 126)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0qj6g"]
-atlas = ExtResource("9_851hy")
-region = Rect2(0, 126, 615, 126)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ojgse"]
-atlas = ExtResource("7_gnqo2")
-region = Rect2(0, 0, 240, 240)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uli2u"]
-atlas = ExtResource("7_gnqo2")
-region = Rect2(240, 0, 240, 240)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i01ws"]
-atlas = ExtResource("7_gnqo2")
-region = Rect2(480, 0, 240, 240)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qx8k3"]
-atlas = ExtResource("6_31big")
-region = Rect2(0, 0, 153, 344)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cokvo"]
-atlas = ExtResource("6_31big")
-region = Rect2(153, 0, 153, 344)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_d6a37"]
-animations = [{
-"frames": [{
-"duration": 1.6,
-"texture": SubResource("AtlasTexture_co0c6")
-}, {
-"duration": 1.6,
-"texture": SubResource("AtlasTexture_0qj6g")
-}],
-"loop": true,
-"name": &"BlueH",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.6,
-"texture": SubResource("AtlasTexture_ojgse")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uli2u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i01ws")
-}],
-"loop": true,
-"name": &"BlueIDLE",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.6,
-"texture": SubResource("AtlasTexture_qx8k3")
-}, {
-"duration": 1.6,
-"texture": SubResource("AtlasTexture_cokvo")
-}],
-"loop": true,
-"name": &"BlueV",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnqo2"]
 atlas = ExtResource("10_31big")
 region = Rect2(0, 0, 171, 178)
@@ -3176,14 +3106,6 @@ color = Color(0.032607622, 0.2701855, 1, 1)
 
 [node name="Animations" type="Node2D" parent="." unique_id=1607332355]
 z_index = 1
-
-[node name="Blue" type="AnimatedSprite2D" parent="Animations" unique_id=1445807133]
-position = Vector2(74, 89.00001)
-scale = Vector2(0.17718251, 0.17718251)
-sprite_frames = SubResource("SpriteFrames_d6a37")
-animation = &"BlueIDLE"
-autoplay = "BlueIDLE"
-frame_progress = 0.87117046
 
 [node name="Green" type="AnimatedSprite2D" parent="Animations" unique_id=756308977]
 position = Vector2(281.00003, 155)
