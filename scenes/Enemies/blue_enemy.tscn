@@ -73,16 +73,15 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k5bnt"]
-radius = 16.0
+radius = 100.97524
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7daao"]
-radius = 178.71765
+radius = 557.02246
 
 [node name="BlueEnemy" type="CharacterBody2D" unique_id=2087932859]
 script = ExtResource("1_k5bnt")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1567321002]
-scale = Vector2(0.17718251, 0.17718251)
 sprite_frames = SubResource("SpriteFrames_gduht")
 animation = &"BlueIDLE"
 autoplay = "BlueIDLE"

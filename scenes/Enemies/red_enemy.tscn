@@ -47,17 +47,17 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dn13x"]
-radius = 12.0
-height = 38.0
+radius = 78.0
+height = 228.0
 
 [node name="RedEnemy" type="CharacterBody2D" unique_id=190207833]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 4
+platform_floor_layers = 4294967044
 script = ExtResource("1_b823v")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1678906617]
 z_index = 1
-scale = Vector2(0.16517851, 0.1651785)
 sprite_frames = SubResource("SpriteFrames_b823v")
 animation = &"Walk"
 autoplay = "Walk"
