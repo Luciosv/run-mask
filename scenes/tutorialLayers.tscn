@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://d0oasu06p8e1u" path="res://scenes/masks.tscn" id="16_slh72"]
 [ext_resource type="AudioStream" uid="uid://d330x4ln863s1" path="res://art/Music/rojo_1.ogg" id="17_hphs8"]
 [ext_resource type="Script" uid="uid://b3y3syviviqm5" path="res://scripts/music/rep.gd" id="18_12c4u"]
-[ext_resource type="Script" uid="uid://cjjvclmagh0a7" path="res://scripts/scene/saturation_setup.gd" id="19_6p632"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ho6b"]
 texture = ExtResource("1_x7myj")
@@ -1391,7 +1390,6 @@ crossfade_duration = 0.5
 fade_out_volume_db = -20.0
 
 [node name="SaturationManager" type="Node2D" parent="." unique_id=801749381]
-script = ExtResource("19_6p632")
 
 [node name="Masks" parent="." unique_id=654534084 instance=ExtResource("16_slh72")]
 script = null

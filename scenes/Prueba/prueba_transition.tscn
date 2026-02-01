@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://674165o8cpj5"]
+
+[ext_resource type="Script" uid="uid://cbo35dm1a3oax" path="res://scripts/scene/transition_manager.gd" id="1_5qdi8"]
+[ext_resource type="Script" uid="uid://d00wm731ft5oj" path="res://scripts/scene/transition_test.gd" id="2_1wbdp"]
+
+[node name="PruebaTransition" type="Node2D" unique_id=1921379957]
+script = ExtResource("1_5qdi8")
+
+[node name="Test" type="Node2D" parent="." unique_id=1305278021]
+script = ExtResource("2_1wbdp")

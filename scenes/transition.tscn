@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://0pdtdfda6tds"]
+
+[ext_resource type="Script" uid="uid://cnhniprsv5h31" path="res://scripts/scene/transition.gd" id="1_rerct"]
+
+[node name="ColorRect" type="ColorRect" unique_id=701242967]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.995, 0.995)
+pivot_offset = Vector2(960, 540)
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_rerct")
