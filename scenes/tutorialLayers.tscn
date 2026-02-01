@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://7fkrnlqdexu8" path="res://art/Sprites/Hoja1.png" id="5_x1bfg"]
 [ext_resource type="Texture2D" uid="uid://cyiv6khc5jw47" path="res://art/Sprites/Hoja2.png" id="6_lo2j2"]
 [ext_resource type="Texture2D" uid="uid://j6hg53m5dt7w" path="res://addons/kenney_particle_pack/flare_01.png" id="6_wfn75"]
+[ext_resource type="Script" uid="uid://pg5wg5fob132" path="res://scripts/buttons/letter_button.gd" id="10_ime57"]
+[ext_resource type="Texture2D" uid="uid://dknewfbvpybps" path="res://art/Sprites/Circle.png" id="11_slh72"]
+[ext_resource type="Texture2D" uid="uid://dolnbetu8jvir" path="res://art/Sprites/K.png" id="12_h68db"]
+[ext_resource type="Texture2D" uid="uid://6838085xpye" path="res://art/Sprites/J.png" id="12_u6chy"]
+[ext_resource type="Texture2D" uid="uid://b185rj4dbke7i" path="res://art/Sprites/L.png" id="13_k0oli"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ho6b"]
 texture = ExtResource("1_x7myj")
@@ -1260,6 +1265,7 @@ tile_map_data = PackedByteArray("AAAMACUAAAABAAAAABALACUAAAACAAAAABAKACUAAAADAAA
 tile_set = SubResource("TileSet_6yjpi")
 
 [node name="Masks" type="Node2D" parent="." unique_id=1515497194]
+visible = false
 
 [node name="Blue" type="CanvasModulate" parent="Masks" unique_id=255894706]
 visible = false
@@ -1377,3 +1383,94 @@ orbit_velocity_curve = SubResource("Curve_lo2j2")
 scale_amount_min = 0.1
 scale_amount_max = 0.2
 color = Color(4.2177343, 2.1530359, 0, 1)
+
+[node name="LetterButtonManager" type="Control" parent="." unique_id=1682048259]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 0
+
+[node name="ButtonJ" type="Control" parent="LetterButtonManager" unique_id=211647402]
+anchors_preset = 0
+offset_left = 1360.0
+offset_top = 8.0
+offset_right = 1360.0
+offset_bottom = 8.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("10_ime57")
+base_color = Color(1, 0.43529412, 0.36862746, 1)
+glow_color = Color(18.892157, 0, 0, 1)
+
+[node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonJ" unique_id=105012954]
+layout_mode = 0
+offset_right = 259.0
+offset_bottom = 255.0
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("12_u6chy")
+
+[node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonJ" unique_id=1551396813]
+modulate = Color(1, 0.43659723, 0.36793825, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 260.0
+offset_bottom = 255.0
+texture = ExtResource("11_slh72")
+
+[node name="ButtonK" type="Control" parent="LetterButtonManager" unique_id=1826209788]
+anchors_preset = 0
+offset_left = 1528.0001
+offset_top = 8.0
+offset_right = 1528.0001
+offset_bottom = 8.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("10_ime57")
+my_mask = 1
+base_color = Color(0.2509804, 0.4745098, 1, 1)
+glow_color = Color(0, 0, 18.892157, 1)
+
+[node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonK" unique_id=504445379]
+layout_mode = 0
+offset_left = -0.00024414063
+offset_right = 257.99976
+offset_bottom = 255.0
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("12_h68db")
+
+[node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonK" unique_id=1005975573]
+modulate = Color(0.25197834, 0.4727887, 1, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 260.0
+offset_bottom = 255.0
+texture = ExtResource("11_slh72")
+
+[node name="ButtonL" type="Control" parent="LetterButtonManager" unique_id=1537015398]
+anchors_preset = 0
+offset_left = 1696.0
+offset_top = 8.0
+offset_right = 1696.0
+offset_bottom = 8.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("10_ime57")
+my_mask = 2
+base_color = Color(0.5019608, 1, 0.47058824, 1)
+glow_color = Color(0, 18.892157, 0, 1)
+
+[node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonL" unique_id=246305134]
+layout_mode = 0
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("13_k0oli")
+
+[node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonL" unique_id=1129757947]
+modulate = Color(0.50365895, 0.99999994, 0.47171986, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 260.0
+offset_bottom = 255.0
+texture = ExtResource("11_slh72")

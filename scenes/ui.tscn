@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://deb4joiwubg0a"]
+
+[ext_resource type="Script" uid="uid://pg5wg5fob132" path="res://scripts/buttons/letter_button.gd" id="1_wm3ai"]
+[ext_resource type="Texture2D" uid="uid://6838085xpye" path="res://art/Sprites/J.png" id="2_8dubc"]
+[ext_resource type="Texture2D" uid="uid://dknewfbvpybps" path="res://art/Sprites/Circle.png" id="3_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://dolnbetu8jvir" path="res://art/Sprites/K.png" id="4_ktti3"]
+[ext_resource type="Texture2D" uid="uid://b185rj4dbke7i" path="res://art/Sprites/L.png" id="5_cgfq5"]
+
+[node name="UI" type="Control" unique_id=502757292]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LetterButtonManager" type="Control" parent="." unique_id=1783074883]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 0
+
+[node name="ButtonJ" type="Control" parent="LetterButtonManager" unique_id=748564733]
+anchors_preset = 0
+offset_left = 1360.0
+offset_top = 8.0
+offset_right = 1360.0
+offset_bottom = 8.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_wm3ai")
+base_color = Color(1, 0.43529412, 0.36862746, 1)
+glow_color = Color(18.892157, 0, 0, 1)
+
+[node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonJ" unique_id=2049606673]
+layout_mode = 0
+offset_right = 259.0
+offset_bottom = 255.0
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("2_8dubc")
+
+[node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonJ" unique_id=226677678]
+modulate = Color(1, 0.43659723, 0.36793825, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 260.0
+offset_bottom = 255.0
+texture = ExtResource("3_p7vwb")
+
+[node name="ButtonK" type="Control" parent="LetterButtonManager" unique_id=2141927629]
+anchors_preset = 0
+offset_left = 1528.0001
+offset_top = 8.0
+offset_right = 1528.0001
+offset_bottom = 8.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_wm3ai")
+my_mask = 1
+base_color = Color(0.2509804, 0.4745098, 1, 1)
+glow_color = Color(0, 0, 18.892157, 1)
+
+[node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonK" unique_id=1859616412]
+layout_mode = 0
+offset_left = -0.00024414063
+offset_right = 257.99976
+offset_bottom = 255.0
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("4_ktti3")
+
+[node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonK" unique_id=523113180]
+modulate = Color(0.25197834, 0.4727887, 1, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 260.0
+offset_bottom = 255.0
+texture = ExtResource("3_p7vwb")
+
+[node name="ButtonL" type="Control" parent="LetterButtonManager" unique_id=819492296]
+anchors_preset = 0
+offset_left = 1696.0
+offset_top = 8.0
+offset_right = 1696.0
+offset_bottom = 8.0
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_wm3ai")
+my_mask = 2
+base_color = Color(0.5019608, 1, 0.47058824, 1)
+glow_color = Color(0, 18.892157, 0, 1)
+
+[node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonL" unique_id=1009001800]
+layout_mode = 0
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("5_cgfq5")
+
+[node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonL" unique_id=1900670105]
+modulate = Color(0.50365895, 0.99999994, 0.47171986, 1)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 260.0
+offset_bottom = 255.0
+texture = ExtResource("3_p7vwb")
