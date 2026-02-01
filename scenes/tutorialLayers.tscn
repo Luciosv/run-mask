@@ -3,17 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://dt0ix3umnjfva" path="res://art/Sprites/Background.png" id="1_x7myj"]
 [ext_resource type="Texture2D" uid="uid://okhyvt44jc76" path="res://art/Sprites/Block11.png" id="3_8y14e"]
 [ext_resource type="Texture2D" uid="uid://bqbhm477v8ir" path="res://art/Sprites/Block11_2.png" id="3_k0oli"]
-[ext_resource type="Texture2D" uid="uid://be5hsj06u7ajm" path="res://addons/kenney_particle_pack/twirl_01.png" id="4_8y14e"]
 [ext_resource type="Texture2D" uid="uid://14fdmvel5nm5" path="res://art/Sprites/Arc.png" id="4_wfn75"]
-[ext_resource type="Texture2D" uid="uid://ci3gmfuippu3a" path="res://addons/kenney_particle_pack/fire_02.png" id="4_x7myj"]
+[ext_resource type="Texture2D" uid="uid://ra4br024rouw" path="res://art/Sprites/Bubble.png" id="5_h68db"]
 [ext_resource type="Texture2D" uid="uid://7fkrnlqdexu8" path="res://art/Sprites/Hoja1.png" id="5_x1bfg"]
 [ext_resource type="Texture2D" uid="uid://cyiv6khc5jw47" path="res://art/Sprites/Hoja2.png" id="6_lo2j2"]
-[ext_resource type="Texture2D" uid="uid://j6hg53m5dt7w" path="res://addons/kenney_particle_pack/flare_01.png" id="6_wfn75"]
+[ext_resource type="Texture2D" uid="uid://dknyo2k4vt2v0" path="res://art/Sprites/flare_01.png" id="8_k0oli"]
 [ext_resource type="Script" uid="uid://pg5wg5fob132" path="res://scripts/buttons/letter_button.gd" id="10_ime57"]
 [ext_resource type="Texture2D" uid="uid://dknewfbvpybps" path="res://art/Sprites/Circle.png" id="11_slh72"]
 [ext_resource type="Texture2D" uid="uid://dolnbetu8jvir" path="res://art/Sprites/K.png" id="12_h68db"]
 [ext_resource type="Texture2D" uid="uid://6838085xpye" path="res://art/Sprites/J.png" id="12_u6chy"]
 [ext_resource type="Texture2D" uid="uid://b185rj4dbke7i" path="res://art/Sprites/L.png" id="13_k0oli"]
+[ext_resource type="Script" uid="uid://dgmaclljprc2d" path="res://scripts/music/music_manager.gd" id="14_k0oli"]
+[ext_resource type="AudioStream" uid="uid://pp40hwjjwodu" path="res://art/Music/azul.ogg" id="15_oamqs"]
+[ext_resource type="AudioStream" uid="uid://cd14coqg77ap4" path="res://art/Music/verde.ogg" id="16_6p632"]
+[ext_resource type="AudioStream" uid="uid://d330x4ln863s1" path="res://art/Music/rojo_1.ogg" id="17_hphs8"]
+[ext_resource type="Script" uid="uid://b3y3syviviqm5" path="res://scripts/music/rep.gd" id="18_12c4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ho6b"]
 texture = ExtResource("1_x7myj")
@@ -1245,37 +1249,6 @@ texture = ExtResource("4_wfn75")
 [sub_resource type="TileSet" id="TileSet_6yjpi"]
 sources/0 = SubResource("TileSetAtlasSource_cq4me")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_slh72"]
-texture = ExtResource("3_8y14e")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_u6chy"]
-sources/0 = SubResource("TileSetAtlasSource_slh72")
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_x1bfg"]
 
 [sub_resource type="Curve" id="Curve_lo2j2"]
@@ -1283,7 +1256,12 @@ _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0.040000007, -1), 0.0, 0.0, 0, 0, Vector2(1, 0.13416588), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yiqsc"]
+[sub_resource type="Resource" id="Resource_inom0"]
+script = ExtResource("18_12c4u")
+RED = ExtResource("17_hphs8")
+BLUE = ExtResource("15_oamqs")
+GREEN = ExtResource("16_6p632")
+metadata/_custom_type_script = "uid://b3y3syviviqm5"
 
 [node name="Tutorial2" type="Node2D" unique_id=1733353222]
 
@@ -1324,9 +1302,6 @@ scale = Vector2(1.4, 1.4)
 tile_map_data = PackedByteArray("AAAMACUAAAABAAAAABALACUAAAACAAAAABAKACUAAAADAAAAABAJACUAAAAEAAAAABAIACUAAAAFAAAAABAHACUAAAAGAAAAABAGACUAAAAHAAAAABAFACUAAAAIAAAAABAEACUAAAAJAAAAABADACUAAAAKAAAAABANACYAAAAAAAEAABAMACYAAAABAAEAABALACYAAAACAAEAABAKACYAAAADAAEAABAJACYAAAAEAAEAABAIACYAAAAFAAEAABAHACYAAAAGAAEAABAGACYAAAAHAAEAABAFACYAAAAIAAEAABAEACYAAAAJAAEAABADACYAAAAKAAEAABANACcAAAAAAAIAABAMACcAAAABAAIAABALACcAAAACAAIAABAKACcAAAADAAIAABAJACcAAAAEAAIAABAIACcAAAAFAAIAABAHACcAAAAGAAIAABAGACcAAAAHAAIAABAFACcAAAAIAAIAABAEACcAAAAJAAIAABADACcAAAAKAAIAABANACgAAAAAAAMAABAMACgAAAABAAMAABALACgAAAACAAMAABAKACgAAAADAAMAABAGACgAAAAHAAMAABAFACgAAAAIAAMAABAEACgAAAAJAAMAABADACgAAAAKAAMAABANACkAAAAAAAQAABAMACkAAAABAAQAABALACkAAAACAAQAABAFACkAAAAIAAQAABAEACkAAAAJAAQAABADACkAAAAKAAQAABANACoAAAAAAAUAABAMACoAAAABAAUAABALACoAAAACAAUAABAFACoAAAAIAAUAABAEACoAAAAJAAUAABADACoAAAAKAAUAABANACsAAAAAAAYAABAMACsAAAABAAYAABALACsAAAACAAYAABAFACsAAAAIAAYAABAEACsAAAAJAAYAABADACsAAAAKAAYAABANACwAAAAAAAcAABAMACwAAAABAAcAABALACwAAAACAAcAABAFACwAAAAIAAcAABAEACwAAAAJAAcAABADACwAAAAKAAcAABANAC0AAAAAAAgAABAMAC0AAAABAAgAABALAC0AAAACAAgAABAFAC0AAAAIAAgAABAEAC0AAAAJAAgAABADAC0AAAAKAAgAABCkAN7/AAAKAAAAAACjAN7/AAAJAAAAAACiAN7/AAAIAAAAAAChAN7/AAAHAAAAAACgAN7/AAAGAAAAAACfAN7/AAAFAAAAAACeAN7/AAAEAAAAAACdAN7/AAADAAAAAACcAN7/AAACAAAAAACbAN7/AAABAAAAAACkAN//AAAKAAEAAACjAN//AAAJAAEAAACiAN//AAAIAAEAAAChAN//AAAHAAEAAACgAN//AAAGAAEAAACfAN//AAAFAAEAAACeAN//AAAEAAEAAACdAN//AAADAAEAAACcAN//AAACAAEAAACbAN//AAABAAEAAACaAN//AAAAAAEAAACkAOD/AAAKAAIAAACjAOD/AAAJAAIAAACiAOD/AAAIAAIAAAChAOD/AAAHAAIAAACgAOD/AAAGAAIAAACfAOD/AAAFAAIAAACeAOD/AAAEAAIAAACdAOD/AAADAAIAAACcAOD/AAACAAIAAACbAOD/AAABAAIAAACaAOD/AAAAAAIAAACkAOH/AAAKAAMAAACjAOH/AAAJAAMAAACiAOH/AAAIAAMAAAChAOH/AAAHAAMAAACdAOH/AAADAAMAAACcAOH/AAACAAMAAACbAOH/AAABAAMAAACaAOH/AAAAAAMAAACkAOL/AAAKAAQAAACjAOL/AAAJAAQAAACiAOL/AAAIAAQAAACcAOL/AAACAAQAAACbAOL/AAABAAQAAACaAOL/AAAAAAQAAACkAOP/AAAKAAUAAACjAOP/AAAJAAUAAACiAOP/AAAIAAUAAACcAOP/AAACAAUAAACbAOP/AAABAAUAAACaAOP/AAAAAAUAAACkAOT/AAAKAAYAAACjAOT/AAAJAAYAAACiAOT/AAAIAAYAAACcAOT/AAACAAYAAACbAOT/AAABAAYAAACaAOT/AAAAAAYAAACkAOX/AAAKAAcAAACjAOX/AAAJAAcAAACiAOX/AAAIAAcAAACcAOX/AAACAAcAAACbAOX/AAABAAcAAACaAOX/AAAAAAcAAACkAOb/AAAKAAgAAACjAOb/AAAJAAgAAACiAOb/AAAIAAgAAACcAOb/AAACAAgAAACbAOb/AAABAAgAAACaAOb/AAAAAAgAAAA=")
 tile_set = SubResource("TileSet_6yjpi")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Scene" unique_id=1650239799]
-tile_set = SubResource("TileSet_u6chy")
-
 [node name="Masks" type="Node2D" parent="." unique_id=1515497194]
 
 [node name="Blue" type="CanvasModulate" parent="Masks" unique_id=255894706]
@@ -1337,7 +1312,7 @@ color = Color(0.60223484, 0.73336357, 1, 1)
 material = SubResource("CanvasItemMaterial_x1bfg")
 position = Vector2(1841, 1071)
 amount = 50
-texture = ExtResource("4_8y14e")
+texture = ExtResource("5_h68db")
 lifetime = 10.0
 emission_shape = 3
 emission_rect_extents = Vector2(1800, 1)
@@ -1397,43 +1372,11 @@ color = Color(4.2177343, 2.1530359, 0, 1)
 visible = false
 color = Color(1, 0.6168541, 0.5590274, 1)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Masks/Red2" unique_id=1175445836]
-visible = false
-modulate = Color(1, 1, 0, 1)
-material = SubResource("CanvasItemMaterial_yiqsc")
-position = Vector2(576, 839)
-scale = Vector2(188.35999, 2.2399998)
-amount = 15
-texture = ExtResource("4_x7myj")
-lifetime = 1.5
-emission_shape = 3
-emission_rect_extents = Vector2(1, 1)
-gravity = Vector2(0, 0)
-scale_amount_min = 0.1
-scale_amount_max = 0.2
-color = Color(1, 0.627451, 1, 1)
-
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="Masks/Red2" unique_id=428076924]
-visible = false
-modulate = Color(1, 1, 0, 1)
-material = SubResource("CanvasItemMaterial_yiqsc")
-position = Vector2(1763, -231)
-scale = Vector2(188.35999, 2.2399998)
-amount = 15
-texture = ExtResource("4_x7myj")
-lifetime = 1.5
-emission_shape = 3
-emission_rect_extents = Vector2(1, 1)
-gravity = Vector2(0, 0)
-scale_amount_min = 0.3
-scale_amount_max = 0.3
-color = Color(1, 0.627451, 1, 1)
-
 [node name="RedParticles" type="CPUParticles2D" parent="Masks/Red2" unique_id=90624437]
 material = SubResource("CanvasItemMaterial_x1bfg")
 position = Vector2(1841, -1071)
 amount = 100
-texture = ExtResource("6_wfn75")
+texture = ExtResource("8_k0oli")
 lifetime = 10.0
 emission_shape = 3
 emission_rect_extents = Vector2(1800, 1)
@@ -1537,3 +1480,9 @@ offset_left = -5.0
 offset_right = 260.0
 offset_bottom = 255.0
 texture = ExtResource("11_slh72")
+
+[node name="MusicManager" type="Node2D" parent="." unique_id=247747402]
+script = ExtResource("14_k0oli")
+music_resource = SubResource("Resource_inom0")
+crossfade_duration = 0.5
+fade_out_volume_db = -20.0

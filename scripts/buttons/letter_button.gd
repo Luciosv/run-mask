@@ -3,7 +3,7 @@ extends Control
 @export var my_mask : MaskManager.ColorMask
 @export var base_color : Color = Color.WHITE  # Color base del borde
 @export var glow_color : Color  # Color del resplandor
-@export var cooldown_time : float = 2.0
+@export var cooldown_time : float = 1.2
 @export var glow_duration : float = 0.3  # Duración del destello en segundos
 
 @onready var border : TextureRect = $Border
@@ -30,13 +30,12 @@ func _ready():
 
 func _on_mask_changed(mask : MaskManager.ColorMask) -> void:
 	# Si la máscara cambiada coincide con la nuestra, activar
-	if mask == my_mask:
 		# Solo resplandece el borde correspondiente
-		create_glow_flash()
-		
-		# Si no está en cooldown, iniciar cooldown
-		if not cooling_down:
-			start_cooldown()
+	create_glow_flash()
+	
+	# Si no está en cooldown, iniciar cooldown
+	if not cooling_down:
+		start_cooldown()
 
 func start_cooldown():
 	cooling_down = true
