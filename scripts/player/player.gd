@@ -38,6 +38,9 @@ var coyote_timer := 0.0
 var jump_buffer_timer := 0.0
 
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+
 # =========================
 # === READY ===============
 # =========================
@@ -65,6 +68,9 @@ func _physics_process(delta: float) -> void:
 func _handle_horizontal(delta: float) -> void:
 	var input := Input.get_axis("left", "right")
 	var target_speed := input * max_speed
+	
+	if is_on_floor():
+		sprite.play("idle")
 
 	var accel := acceleration
 	if not is_on_floor():
@@ -75,9 +81,9 @@ func _handle_horizontal(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
 	if velocity.x < 0:
-		$AnimatedSprite2D.flip_h = true
+		sprite.flip_h = true
 	elif velocity.x > 0:
-		$AnimatedSprite2D.flip_h = false
+		sprite.flip_h = false
 	
 
 # =========================
@@ -95,6 +101,7 @@ func _do_jump() -> void:
 	velocity.y = -jump_velocity
 	jump_buffer_timer = 0
 	coyote_timer = 0
+	sprite.play("start-jump")
 
 
 # =========================
@@ -115,6 +122,11 @@ func _apply_gravity(delta: float) -> void:
 			applied_gravity *= low_jump_multiplier
 
 		velocity.y += applied_gravity * delta
+		
+		if velocity.y < 0:
+			sprite.play("jumping")
+		else:
+			sprite.play("falling")
 
 
 # =========================
