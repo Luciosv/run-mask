@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_o6xl0"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://d0oasu06p8e1u" path="res://scenes/masks.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" path="res://scenes/music.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://cfllbgc88x2os" path="res://scenes/menus/pausa.tscn" id="8_tipki"]
 
 [sub_resource type="Resource" id="Resource_choun"]
 script = ExtResource("3_o6xl0")
@@ -50,3 +52,9 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="Masks" parent="." unique_id=2059608976 instance=ExtResource("5_85g3d")]
 physics_interpolation_mode = 0
 script = null
+
+[node name="Music" parent="." unique_id=197912874 instance=ExtResource("7_o6xl0")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2024521979]
+
+[node name="pausa" parent="CanvasLayer" unique_id=211869799 instance=ExtResource("8_tipki")]

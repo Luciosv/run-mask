@@ -83,6 +83,8 @@ collision_layer = 2
 collision_mask = 4
 motion_mode = 1
 script = ExtResource("1_k5bnt")
+move_time = 0.8
+wait_time = 0.2
 color = 1
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1567321002]
@@ -95,7 +97,6 @@ shape = SubResource("CircleShape2D_k5bnt")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1074111387]
 path_postprocessing = 1
-debug_enabled = true
 
 [node name="DamageArea" type="Area2D" parent="." unique_id=575808405]
 collision_layer = 16

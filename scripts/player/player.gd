@@ -42,6 +42,8 @@ var jump_buffer_timer := 0.0
 var can_move = true
 var gravity_active = true
 
+@onready var original_scale = scale
+
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -157,7 +159,6 @@ func _on_hurt_area_area_entered(area: Area2D) -> void:
 	
 	sprite.play("falling")
 	
-	var original_scale = scale
 	var tween = create_tween()
 	tween.tween_property(self,'scale',original_scale/2,0.3)
 	await tween.finished

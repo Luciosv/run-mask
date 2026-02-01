@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cfllbgc88x2os"]
+
+[ext_resource type="Script" uid="uid://bw3ghh4xfh80d" path="res://scenes/menus/pausa.gd" id="1_ayxh5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5pdfw"]
+font_size = 200
+font_color = Color(1, 0.6862745, 0, 1)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[node name="pausa" type="Control" unique_id=211869799]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ayxh5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1205619205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07096281, 0.1399746, 0.1417664, 0.18431373)
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect" unique_id=1692881642]
+modulate = Color(1, 0.7294118, 0.54509807, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/PanelContainer" unique_id=1292758129]
+layout_mode = 2
+theme_override_constants/separation = 17
+alignment = 1
+
+[node name="titulo" type="Label" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=347682138]
+layout_mode = 2
+text = "PAUSA"
+label_settings = SubResource("LabelSettings_5pdfw")
+horizontal_alignment = 1
+
+[node name="resume" type="Button" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=1936003927]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(16.638432, 16.638432, 16.638432, 1)
+theme_override_font_sizes/font_size = 120
+text = "RESUME
+"
+
+[node name="restart" type="Button" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=69414912]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 120
+text = "RESTART"
+
+[node name="main menu" type="Button" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=1997241133]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(16.638432, 16.638432, 16.638432, 1)
+theme_override_font_sizes/font_size = 120
+text = "MAIN MENU"
+
+[connection signal="pressed" from="ColorRect/PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="ColorRect/PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ColorRect/PanelContainer/VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]
