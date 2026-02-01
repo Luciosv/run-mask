@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cfud3m0la634w"]
+
+[ext_resource type="Script" uid="uid://dgmaclljprc2d" path="res://scripts/music/music_manager.gd" id="1_wia2r"]
+[ext_resource type="AudioStream" uid="uid://pp40hwjjwodu" path="res://art/Music/azul.ogg" id="2_mobtd"]
+[ext_resource type="AudioStream" uid="uid://cd14coqg77ap4" path="res://art/Music/verde.ogg" id="3_keplp"]
+[ext_resource type="AudioStream" uid="uid://d330x4ln863s1" path="res://art/Music/rojo_1.ogg" id="4_d6bcn"]
+[ext_resource type="Script" uid="uid://b3y3syviviqm5" path="res://scripts/music/rep.gd" id="5_okdju"]
+
+[sub_resource type="Resource" id="Resource_wia2r"]
+script = ExtResource("5_okdju")
+RED = ExtResource("4_d6bcn")
+BLUE = ExtResource("2_mobtd")
+GREEN = ExtResource("3_keplp")
+metadata/_custom_type_script = "uid://b3y3syviviqm5"
+
+[node name="Music" type="Node2D" unique_id=197912874]
+script = ExtResource("1_wia2r")
+music_resource = SubResource("Resource_wia2r")
+crossfade_duration = 0.5
+fade_out_volume_db = -20.0
