@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://byweqxklmlwqs" path="res://art/Sprites/PlayerIDLE.png" id="2_dovo2"]
 [ext_resource type="PackedScene" uid="uid://crceshc08ooog" path="res://scenes/ui.tscn" id="3_gmlin"]
 [ext_resource type="Texture2D" uid="uid://cv3pej1pai8dx" path="res://art/Sprites/PlayerJump.png" id="3_lvxji"]
-[ext_resource type="Script" uid="uid://klbbbj4kgrfu" path="res://scripts/player/power_mask.gd" id="5_p47bc"]
+[ext_resource type="Script" path="res://scripts/player/power_mask.gd" id="5_p47bc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmlin"]
 radius = 57.0
@@ -113,5 +113,7 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea" unique_id=1060168281]
 shape = SubResource("CircleShape2D_p47bc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1840511168]
 
 [connection signal="area_entered" from="HurtArea" to="." method="_on_hurt_area_area_entered"]

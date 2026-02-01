@@ -10,3 +10,4 @@ func _ready() -> void:
 func _toggle_tiles(mask : MaskManager.ColorMask):
 	visible = color == mask
 	collision_enabled = color == mask
+	print("hola")

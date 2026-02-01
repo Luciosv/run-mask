@@ -1,6 +1,11 @@
 class_name Player extends CharacterBody2D
 
 signal hurt
+#mariano AGREGAR SONIDO
+#@onready var audio_player = $AudioStreamPlayer
+
+
+
 
 # =========================
 # === MOVIMIENTO ==========
@@ -29,6 +34,8 @@ signal hurt
 @export var coyote_time := 0.12
 @export var jump_buffer_time := 0.12
 
+#mariano
+var jump_sound = preload("res://art/Music/swing-whoosh-110410.mp3")
 
 # =========================
 # === VARIABLES INTERNAS ==
@@ -53,6 +60,9 @@ func _ready() -> void:
 	# Matemática del salto (esto es CLAVE)
 	gravity = (2.0 * jump_height) / pow(jump_time_to_peak, 2)
 	jump_velocity = gravity * jump_time_to_peak
+	#mariano
+#	audio_player.volume_db = 0.0  # Volumen (0 = normal)
+#	audio_player.pitch_scale = 1.0  # Tono (1.0 = normal)
 
 
 # =========================
@@ -111,7 +121,9 @@ func _do_jump() -> void:
 	jump_buffer_timer = 0
 	coyote_timer = 0
 	sprite.play("start-jump")
-
+#marianoo
+	#audio_player.stream = jump_sound
+	#audio_player.play()
 
 # =========================
 # === GRAVEDAD ============
