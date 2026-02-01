@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://deb4joiwubg0a"]
+[gd_scene format=3 uid="uid://crceshc08ooog"]
 
 [ext_resource type="Script" uid="uid://pg5wg5fob132" path="res://scripts/buttons/letter_button.gd" id="1_wm3ai"]
 [ext_resource type="Texture2D" uid="uid://6838085xpye" path="res://art/Sprites/J.png" id="2_8dubc"]
@@ -16,12 +16,11 @@ grow_vertical = 2
 
 [node name="LetterButtonManager" type="Control" parent="." unique_id=1783074883]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ButtonJ" type="Control" parent="LetterButtonManager" unique_id=748564733]
 anchors_preset = 0

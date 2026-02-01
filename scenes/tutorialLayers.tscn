@@ -1285,7 +1285,7 @@ point_count = 2
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yiqsc"]
 
-[node name="Tutorial" type="Node2D" unique_id=1733353222]
+[node name="Tutorial2" type="Node2D" unique_id=1733353222]
 
 [node name="Scene" type="Node2D" parent="." unique_id=1266879330]
 
@@ -1328,7 +1328,6 @@ tile_set = SubResource("TileSet_6yjpi")
 tile_set = SubResource("TileSet_u6chy")
 
 [node name="Masks" type="Node2D" parent="." unique_id=1515497194]
-visible = false
 
 [node name="Blue" type="CanvasModulate" parent="Masks" unique_id=255894706]
 visible = false
@@ -1353,6 +1352,7 @@ scale_amount_max = 0.1
 color = Color(7.6920245e-05, 2.8677893, 3.2148788, 1)
 
 [node name="Green" type="CanvasModulate" parent="Masks" unique_id=1933169664]
+visible = false
 color = Color(0.5607117, 1, 0.5292202, 1)
 
 [node name="GreenParticles" type="CPUParticles2D" parent="Masks/Green" unique_id=1357800449]

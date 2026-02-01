@@ -18,11 +18,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 Mask="*uid://5n5isa4idik5"
+PhantomCameraManager="*uid://duq6jhf6unyis"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 [input]
 
@@ -66,6 +71,7 @@ green_color={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

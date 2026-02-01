@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://oeumuoecslfc" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://byweqxklmlwqs" path="res://art/Sprites/PlayerIDLE.png" id="2_dovo2"]
+[ext_resource type="PackedScene" uid="uid://crceshc08ooog" path="res://scenes/ui.tscn" id="3_gmlin"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmlin"]
 radius = 57.0
@@ -49,4 +50,6 @@ sprite_frames = SubResource("SpriteFrames_75vfm")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=262931435]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1880472497]
+
+[node name="UI" parent="CanvasLayer" unique_id=502757292 instance=ExtResource("3_gmlin")]
