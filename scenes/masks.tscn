@@ -6,24 +6,30 @@
 [ext_resource type="Texture2D" uid="uid://cyiv6khc5jw47" path="res://art/Sprites/Hoja2.png" id="3_rgdqf"]
 [ext_resource type="Texture2D" uid="uid://dknyo2k4vt2v0" path="res://art/Sprites/flare_01.png" id="5_thh1q"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_o3fgi"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_12c4u"]
 
-[sub_resource type="Curve" id="Curve_yqysf"]
+[sub_resource type="Curve" id="Curve_inom0"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0.040000007, -1), 0.0, 0.0, 0, 0, Vector2(1, 0.13416588), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[node name="Masks" type="Node2D" unique_id=654534084]
-
-[node name="RGB" type="Node2D" parent="." unique_id=1660501219]
+[node name="RGB" type="Control" unique_id=2059608976]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_thh1q")
 
-[node name="Blue" type="CanvasModulate" parent="RGB" unique_id=1241178803]
-color = Color(0.60223484, 0.73336357, 1, 1)
+[node name="Blue" type="ColorRect" parent="." unique_id=1143867535]
+visible = false
+layout_mode = 0
+offset_left = -48.0
+offset_top = -1104.0
+offset_right = 3744.0
+offset_bottom = 1104.0
+color = Color(0, 0, 1, 1)
 
-[node name="BlueParticles" type="CPUParticles2D" parent="RGB/Blue" unique_id=809636852]
-material = SubResource("CanvasItemMaterial_o3fgi")
-position = Vector2(1841, 1071)
+[node name="BlueParticles" type="CPUParticles2D" parent="Blue" unique_id=1690076919]
+material = SubResource("CanvasItemMaterial_12c4u")
+position = Vector2(1848, 2144)
 amount = 50
 texture = ExtResource("2_rgdqf")
 lifetime = 10.0
@@ -34,18 +40,42 @@ initial_velocity_max = 100.0
 angular_velocity_max = 0.1
 orbit_velocity_min = 0.01
 orbit_velocity_max = 0.02
-orbit_velocity_curve = SubResource("Curve_yqysf")
+orbit_velocity_curve = SubResource("Curve_inom0")
 scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.4312356, 2.9470973, 3.2149997, 1)
 
-[node name="Green" type="CanvasModulate" parent="RGB" unique_id=506109010]
-visible = false
-color = Color(0.5607117, 1, 0.5292202, 1)
+[node name="BlueParticles2" type="CPUParticles2D" parent="Blue" unique_id=563309515]
+material = SubResource("CanvasItemMaterial_12c4u")
+position = Vector2(1848, 2144)
+amount = 50
+texture = ExtResource("2_rgdqf")
+lifetime = 10.0
+emission_shape = 3
+emission_rect_extents = Vector2(1800, 1)
+gravity = Vector2(0, -50)
+initial_velocity_max = 100.0
+angular_velocity_max = 0.1
+orbit_velocity_min = 0.01
+orbit_velocity_max = 0.02
+orbit_velocity_curve = SubResource("Curve_inom0")
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(7.5611955e-05, 2.6727445, 2.9999573, 0.8352941)
 
-[node name="GreenParticles" type="CPUParticles2D" parent="RGB/Green" unique_id=358598603]
-material = SubResource("CanvasItemMaterial_o3fgi")
-position = Vector2(-12, -13)
+[node name="Green" type="ColorRect" parent="." unique_id=1135400724]
+visible = false
+modulate = Color(1, 1, 1, 0.13333334)
+layout_mode = 0
+offset_left = -48.0
+offset_top = -1104.0
+offset_right = 3744.0
+offset_bottom = 1104.0
+color = Color(0, 1, 0, 1)
+
+[node name="GreenParticles" type="CPUParticles2D" parent="Green" unique_id=267721199]
+material = SubResource("CanvasItemMaterial_12c4u")
+position = Vector2(32, 1094)
 amount = 100
 texture = ExtResource("2_thh1q")
 lifetime = 10.0
@@ -57,14 +87,14 @@ initial_velocity_max = 500.0
 angular_velocity_max = 0.1
 orbit_velocity_min = 0.01
 orbit_velocity_max = 0.02
-orbit_velocity_curve = SubResource("Curve_yqysf")
+orbit_velocity_curve = SubResource("Curve_inom0")
 scale_amount_min = 0.1
 scale_amount_max = 0.2
 color = Color(4.2177343, 2.1530359, 0, 1)
 
-[node name="GreenParticles2" type="CPUParticles2D" parent="RGB/Green" unique_id=1337004515]
-material = SubResource("CanvasItemMaterial_o3fgi")
-position = Vector2(-12, -19)
+[node name="GreenParticles2" type="CPUParticles2D" parent="Green" unique_id=663365089]
+material = SubResource("CanvasItemMaterial_12c4u")
+position = Vector2(32, 1088)
 amount = 100
 texture = ExtResource("3_rgdqf")
 lifetime = 10.0
@@ -76,18 +106,24 @@ initial_velocity_max = 500.0
 angular_velocity_max = 0.1
 orbit_velocity_min = 0.01
 orbit_velocity_max = 0.02
-orbit_velocity_curve = SubResource("Curve_yqysf")
+orbit_velocity_curve = SubResource("Curve_inom0")
 scale_amount_min = 0.1
 scale_amount_max = 0.2
 color = Color(4.2177343, 2.1530359, 0, 1)
 
-[node name="Red" type="CanvasModulate" parent="RGB" unique_id=1050004976]
+[node name="Red" type="ColorRect" parent="." unique_id=1200671312]
 visible = false
-color = Color(1, 0.6168541, 0.5590274, 1)
+modulate = Color(1, 1, 1, 0.33333334)
+layout_mode = 0
+offset_left = -48.0
+offset_top = -1104.0
+offset_right = 3744.0
+offset_bottom = 1104.0
+color = Color(1, 0, 0.019607844, 1)
 
-[node name="RedParticles" type="CPUParticles2D" parent="RGB/Red" unique_id=858217766]
-material = SubResource("CanvasItemMaterial_o3fgi")
-position = Vector2(1841, -1071)
+[node name="RedParticles" type="CPUParticles2D" parent="Red" unique_id=1364687845]
+material = SubResource("CanvasItemMaterial_12c4u")
+position = Vector2(1840, 88)
 amount = 100
 texture = ExtResource("5_thh1q")
 lifetime = 10.0
@@ -98,14 +134,14 @@ initial_velocity_max = 100.0
 angular_velocity_max = 0.1
 orbit_velocity_min = 0.01
 orbit_velocity_max = 0.02
-orbit_velocity_curve = SubResource("Curve_yqysf")
+orbit_velocity_curve = SubResource("Curve_inom0")
 scale_amount_min = 0.1
 scale_amount_max = 0.2
 color = Color(4.2177343, 2.1530359, 0, 1)
 
-[node name="RedParticles2" type="CPUParticles2D" parent="RGB/Red" unique_id=1938900883]
-material = SubResource("CanvasItemMaterial_o3fgi")
-position = Vector2(1841, -1071)
+[node name="RedParticles2" type="CPUParticles2D" parent="Red" unique_id=943353707]
+material = SubResource("CanvasItemMaterial_12c4u")
+position = Vector2(1840, 88)
 amount = 100
 texture = ExtResource("5_thh1q")
 lifetime = 10.0
@@ -116,7 +152,7 @@ initial_velocity_max = 100.0
 angular_velocity_max = 0.1
 orbit_velocity_min = 0.01
 orbit_velocity_max = 0.02
-orbit_velocity_curve = SubResource("Curve_yqysf")
+orbit_velocity_curve = SubResource("Curve_inom0")
 scale_amount_min = 0.1
 scale_amount_max = 0.2
 color = Color(0.5818325, 0.5818326, 0.5818326, 1)
