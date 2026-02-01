@@ -50,6 +50,9 @@ animations = [{
 radius = 78.0
 height = 228.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_b823v"]
+radius = 38.832977
+
 [node name="RedEnemy" type="CharacterBody2D" unique_id=190207833]
 collision_layer = 2
 collision_mask = 4
@@ -64,3 +67,11 @@ autoplay = "Walk"
 
 [node name="FloorCollision" type="CollisionShape2D" parent="." unique_id=353573449]
 shape = SubResource("CapsuleShape2D_dn13x")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1877320168]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=676052361]
+shape = SubResource("CircleShape2D_b823v")

@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
 
+signal hurt
+
 # =========================
 # === MOVIMIENTO ==========
 # =========================
@@ -37,6 +39,9 @@ var jump_velocity := 0.0
 var coyote_timer := 0.0
 var jump_buffer_timer := 0.0
 
+var can_move = true
+var gravity_active = true
+
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -55,9 +60,13 @@ func _ready() -> void:
 # =========================
 func _physics_process(delta: float) -> void:
 	_handle_timers(delta)
-	_handle_horizontal(delta)
-	_handle_jump()
-	_apply_gravity(delta)
+	
+	if can_move :
+		_handle_horizontal(delta)
+		_handle_jump()
+	
+	if gravity_active:
+		_apply_gravity(delta)
 
 	move_and_slide()
 
@@ -138,3 +147,20 @@ func _handle_timers(delta: float) -> void:
 
 	if jump_buffer_timer > 0:
 		jump_buffer_timer -= delta
+
+
+func _on_hurt_area_area_entered(area: Area2D) -> void:
+	hurt.emit()
+	velocity = Vector2.ZERO
+	
+	can_move = false
+	gravity_active = false
+	
+	sprite.play("falling")
+	
+	var original_scale = scale
+	var tween = create_tween()
+	tween.tween_property(self,'scale',original_scale/2,0.3)
+	await tween.finished
+	tween = create_tween()
+	tween.tween_property(self,'scale',original_scale,0.3)

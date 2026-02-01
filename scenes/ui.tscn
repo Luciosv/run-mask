@@ -14,21 +14,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LetterButtonManager" type="Control" parent="." unique_id=1783074883]
+[node name="LetterButtonManager" type="Control" parent="." unique_id=1961319811]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -544.11
+offset_right = -2.1099854
+grow_horizontal = 0
 
 [node name="ButtonJ" type="Control" parent="LetterButtonManager" unique_id=748564733]
 anchors_preset = 0
-offset_left = 1360.0
-offset_top = 8.0
-offset_right = 1360.0
-offset_bottom = 8.0
-scale = Vector2(0.6, 0.6)
+offset_left = 190.0
+offset_top = 30.0
+offset_right = 190.0
+offset_bottom = 30.0
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_wm3ai")
 base_color = Color(1, 0.43529412, 0.36862746, 1)
 glow_color = Color(18.892157, 0, 0, 1)
@@ -51,15 +52,15 @@ texture = ExtResource("3_p7vwb")
 
 [node name="ButtonK" type="Control" parent="LetterButtonManager" unique_id=2141927629]
 anchors_preset = 0
-offset_left = 1528.0001
-offset_top = 8.0
-offset_right = 1528.0001
-offset_bottom = 8.0
-scale = Vector2(0.6, 0.6)
+offset_left = 300.0
+offset_top = 30.0
+offset_right = 300.0
+offset_bottom = 30.0
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_wm3ai")
-my_mask = 1
-base_color = Color(0.2509804, 0.4745098, 1, 1)
-glow_color = Color(0, 0, 18.892157, 1)
+my_mask = 2
+base_color = Color(0.5019608, 1, 0.47058824, 1)
+glow_color = Color(0, 18.892, 0, 1)
 
 [node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonK" unique_id=1859616412]
 layout_mode = 0
@@ -71,7 +72,7 @@ fill_mode = 4
 texture_progress = ExtResource("4_ktti3")
 
 [node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonK" unique_id=523113180]
-modulate = Color(0.25197834, 0.4727887, 1, 1)
+modulate = Color(0.5019608, 1, 0.47058824, 1)
 layout_mode = 0
 offset_left = -5.0
 offset_right = 260.0
@@ -80,15 +81,15 @@ texture = ExtResource("3_p7vwb")
 
 [node name="ButtonL" type="Control" parent="LetterButtonManager" unique_id=819492296]
 anchors_preset = 0
-offset_left = 1696.0
-offset_top = 8.0
-offset_right = 1696.0
-offset_bottom = 8.0
-scale = Vector2(0.6, 0.6)
+offset_left = 410.0
+offset_top = 30.0
+offset_right = 410.0
+offset_bottom = 30.0
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_wm3ai")
-my_mask = 2
-base_color = Color(0.5019608, 1, 0.47058824, 1)
-glow_color = Color(0, 18.892157, 0, 1)
+my_mask = 1
+base_color = Color(0.2509804, 0.4745098, 1, 1)
+glow_color = Color(0, 0, 18.892, 1)
 
 [node name="CooldownBar" type="TextureProgressBar" parent="LetterButtonManager/ButtonL" unique_id=1009001800]
 layout_mode = 0
@@ -97,7 +98,7 @@ fill_mode = 4
 texture_progress = ExtResource("5_cgfq5")
 
 [node name="Border" type="TextureRect" parent="LetterButtonManager/ButtonL" unique_id=1900670105]
-modulate = Color(0.50365895, 0.99999994, 0.47171986, 1)
+modulate = Color(0.2509804, 0.4745098, 1, 1)
 layout_mode = 0
 offset_left = -5.0
 offset_right = 260.0
