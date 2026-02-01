@@ -150,7 +150,6 @@ func _handle_timers(delta: float) -> void:
 
 
 func _on_hurt_area_area_entered(area: Area2D) -> void:
-	hurt.emit()
 	velocity = Vector2.ZERO
 	
 	can_move = false
@@ -164,3 +163,12 @@ func _on_hurt_area_area_entered(area: Area2D) -> void:
 	await tween.finished
 	tween = create_tween()
 	tween.tween_property(self,'scale',original_scale,0.3)
+	await tween.finished
+	
+	hurt.emit()
+
+
+func restart_player():
+	can_move = true
+	gravity_active = true
+	sprite.play("idle")

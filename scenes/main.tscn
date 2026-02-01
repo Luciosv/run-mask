@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c7iaennu8jdj2"]
+
+[ext_resource type="PackedScene" uid="uid://bacgna3cdssj0" path="res://scenes/player/player.tscn" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://dlumser3dkgtk" path="res://scripts/main.gd" id="1_tefeu"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="2_tefeu"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_o6xl0"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://d0oasu06p8e1u" path="res://scenes/masks.tscn" id="5_85g3d"]
+
+[sub_resource type="Resource" id="Resource_choun"]
+script = ExtResource("3_o6xl0")
+
+[node name="Main" type="Node" unique_id=1482469447]
+script = ExtResource("1_tefeu")
+
+[node name="Player" parent="." unique_id=234454025 instance=ExtResource("1_tbgi4")]
+z_index = 5
+position = Vector2(351, 966.99994)
+scale = Vector2(0.35, 0.35)
+max_speed = 550.0
+acceleration = 2500.0
+deceleration = 3000.0
+air_control = 1.5
+jump_height = 250.0
+fall_gravity_multiplier = 1.4
+
+[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=1620416936 node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(351, 966.99994)
+script = ExtResource("2_tefeu")
+follow_mode = 2
+follow_target = NodePath("../Player")
+tween_resource = SubResource("Resource_choun")
+follow_damping = true
+follow_damping_value = Vector2(0.5, 0.05)
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=269250862]
+physics_interpolation_mode = 1
+top_level = true
+position = Vector2(351, 966.99994)
+process_callback = 0
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1029883250]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_tipki")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Masks" parent="." unique_id=2059608976 instance=ExtResource("5_85g3d")]
+physics_interpolation_mode = 0
+script = null

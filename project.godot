@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RunMask"
-run/main_scene="uid://c1a17mpvyxhuw"
+run/main_scene="uid://c7iaennu8jdj2"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
