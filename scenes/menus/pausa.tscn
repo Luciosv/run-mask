@@ -43,7 +43,7 @@ alignment = 1
 
 [node name="titulo" type="Label" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=347682138]
 layout_mode = 2
-text = "PAUSA"
+text = "PAUSE"
 label_settings = SubResource("LabelSettings_5pdfw")
 horizontal_alignment = 1
 

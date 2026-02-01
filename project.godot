@@ -13,7 +13,8 @@ config_version=5
 config/name="RunMask"
 run/main_scene="uid://doq8qtlr6vumb"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/image="uid://cd21u0gxmq25u"
+config/icon="uid://cd21u0gxmq25u"
 
 [autoload]
 

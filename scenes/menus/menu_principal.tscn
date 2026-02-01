@@ -43,12 +43,12 @@ theme_override_constants/separation = 15
 [node name="jugar" type="Button" parent="VBoxContainer" unique_id=1627862691]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "JUGAR"
+text = "PLAY"
 
 [node name="salir" type="Button" parent="VBoxContainer" unique_id=128906904]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "SALIR"
+text = "EXIT"
 
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]

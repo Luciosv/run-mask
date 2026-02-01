@@ -10,12 +10,14 @@ var current_level : Level
 
 @onready var player : Player = $Player
 @onready var phantom : PhantomCamera2D = $PhantomCamera2D
+@onready var win_screen: Control = $CanvasLayer/WinScreen
 
 
 func _ready() -> void:
 	load_level(LEVEL_1)
 	
 	player.hurt.connect(_on_hurt_player)
+	current_level.win.connect(_on_win)
 
 
 func load_level(level_scene : PackedScene) -> void:
@@ -49,3 +51,7 @@ func _setup_camera() -> void:
 func _on_hurt_player():
 	_setup_player()
 	player.restart_player()
+
+
+func _on_win():
+	win_screen.show()
