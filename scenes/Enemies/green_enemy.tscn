@@ -39,6 +39,9 @@ animations = [{
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.18922198), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0anm6"]
+radius = 39.45884
+
 [node name="GreenEnemy" type="CharacterBody2D" unique_id=323755692]
 collision_layer = 2
 collision_mask = 4
@@ -61,3 +64,12 @@ frame_progress = 0.54297674
 width = 18.0
 width_curve = SubResource("Curve_0anm6")
 default_color = Color(0.14117648, 0.41960785, 0.12941177, 1)
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=847235430]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1540761392]
+position = Vector2(-1, 17)
+shape = SubResource("CircleShape2D_0anm6")

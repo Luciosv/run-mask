@@ -75,6 +75,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_k5bnt"]
 radius = 100.97524
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7daao"]
+radius = 38.832977
+
 [node name="BlueEnemy" type="CharacterBody2D" unique_id=2087932859]
 collision_layer = 2
 collision_mask = 4
@@ -93,3 +96,11 @@ shape = SubResource("CircleShape2D_k5bnt")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1074111387]
 path_postprocessing = 1
 debug_enabled = true
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=575808405]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=97188823]
+shape = SubResource("CircleShape2D_7daao")

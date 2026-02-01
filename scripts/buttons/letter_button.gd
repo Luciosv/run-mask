@@ -27,11 +27,15 @@ func _ready():
 	
 	# Conectar señal del MaskManager
 	mask_manager.changed_mask.connect(_on_mask_changed)
+	
+	if Mask.current_mask == my_mask: create_glow_flash()
+	else : border.modulate = base_color
 
 func _on_mask_changed(mask : MaskManager.ColorMask) -> void:
 	# Si la máscara cambiada coincide con la nuestra, activar
-		# Solo resplandece el borde correspondiente
-	create_glow_flash()
+	# Solo resplandece el borde correspondiente
+	if mask == my_mask: create_glow_flash()
+	else : border.modulate = base_color
 	
 	# Si no está en cooldown, iniciar cooldown
 	if not cooling_down:
@@ -47,8 +51,8 @@ func create_glow_flash():
 	border.modulate = glow_color
 	
 	# Crear tween para volver al color base
-	var tween = create_tween()
-	tween.tween_property(border, "modulate", base_color, glow_duration)
+	#var tween = create_tween()
+	#tween.tween_property(border, "modulate", base_color, glow_duration)
 
 func _process(delta: float) -> void:
 	if not cooling_down:
@@ -65,4 +69,4 @@ func _process(delta: float) -> void:
 	if cooldown_left <= 0:
 		cooling_down = false
 		cooldown_bar.value = 100  # Llenarla completamente y mantenerla ahí
-		border.modulate = base_color  # Asegurar que esté en color base
+		#border.modulate = base_color  # Asegurar que esté en color base
