@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://crceshc08ooog" path="res://scenes/ui.tscn" id="3_gmlin"]
 [ext_resource type="Texture2D" uid="uid://cv3pej1pai8dx" path="res://art/Sprites/PlayerJump.png" id="3_lvxji"]
 [ext_resource type="Script" uid="uid://klbbbj4kgrfu" path="res://scripts/player/power_mask.gd" id="5_p47bc"]
+[ext_resource type="AudioStream" uid="uid://d4bwwr63e85v4" path="res://art/sounds/jump.wav" id="6_0owmy"]
+[ext_resource type="AudioStream" uid="uid://d14werrsem402" path="res://art/sounds/falling.wav" id="7_qek5x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmlin"]
 radius = 57.0
@@ -113,5 +115,13 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea" unique_id=1060168281]
 shape = SubResource("CircleShape2D_p47bc")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=502624120]
+stream = ExtResource("6_0owmy")
+volume_db = 10.0
+
+[node name="FallingSound" type="AudioStreamPlayer2D" parent="." unique_id=846339569]
+stream = ExtResource("7_qek5x")
+volume_db = 10.0
 
 [connection signal="area_entered" from="HurtArea" to="." method="_on_hurt_area_area_entered"]

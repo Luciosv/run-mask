@@ -41,11 +41,14 @@ var jump_buffer_timer := 0.0
 
 var can_move = true
 var gravity_active = true
+var fall = true
 
 @onready var original_scale = scale
 
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var falling_sound: AudioStreamPlayer2D = $FallingSound
 
 
 # =========================
@@ -113,6 +116,8 @@ func _do_jump() -> void:
 	jump_buffer_timer = 0
 	coyote_timer = 0
 	sprite.play("start-jump")
+	jump_sound.play()
+	fall = false
 
 
 # =========================
@@ -138,6 +143,11 @@ func _apply_gravity(delta: float) -> void:
 			sprite.play("jumping")
 		else:
 			sprite.play("falling")
+		
+		
+		if is_on_floor() and not fall:
+			falling_sound.play()
+			fall = true
 
 
 # =========================
