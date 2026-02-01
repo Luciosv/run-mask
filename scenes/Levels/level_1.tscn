@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://blbummi6gt5bf"]
 
-[ext_resource type="Script" uid="uid://b6577gxp20buo" path="res://level_1.gd" id="1_ptgt0"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_ptgt0"]
 [ext_resource type="Texture2D" uid="uid://dt0ix3umnjfva" path="res://art/Sprites/Background.png" id="2_xxpsm"]
 [ext_resource type="Texture2D" uid="uid://c8cjqfdjimce5" path="res://art/Sprites/TutorialBGGuide.jpeg" id="3_j85eu"]
 [ext_resource type="Texture2D" uid="uid://okhyvt44jc76" path="res://art/Sprites/Block11.png" id="4_4p1o3"]
@@ -4789,7 +4789,7 @@ navigation_polygon = SubResource("NavigationPolygon_5gowt")
 
 [node name="Background" type="TileMapLayer" parent="Scene2" unique_id=1464263046]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAAcAAgAAAAAAAAAAAAcABgAAAAAAAAAADBVABgAAAAAAAAAACBVAAgAAAAAAAAAAAAcAPj/AAAAAAAAABBVAPj/AAAAAAAAADA=")
+tile_map_data = PackedByteArray("AAAcAAgAAAAAAAAAAAAcABgAAAAAAAAAADBVABgAAAAAAAAAACBVAAgAAAAAAAAAAAAcAPj/AAAAAAAAABBVAPj/AAAAAAAAADAcAOj/AAAAAAAAAABVAOj/AAAAAAAAABA=")
 tile_set = SubResource("TileSet_a60bd")
 
 [node name="Guide" type="TileMapLayer" parent="Scene2" unique_id=1221885586]
