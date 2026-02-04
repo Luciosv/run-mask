@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://g0ncr8scepir"
+path="res://.godot/imported/TipografiaRM.fnt-a3cc25f6414ad7df5f36145ff7ee21fc.fontdata"
+
+[deps]
+
+source_file="res://fonts/TipografiaRM.fnt"
+dest_files=["res://.godot/imported/TipografiaRM.fnt-a3cc25f6414ad7df5f36145ff7ee21fc.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

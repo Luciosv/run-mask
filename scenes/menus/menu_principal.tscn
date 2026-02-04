@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8fw7r2yhuyxu" path="res://scenes/menus/menu_principal.gd" id="1_cskyh"]
 [ext_resource type="Texture2D" uid="uid://dsultqr3e5wy" path="res://scenes/menus/WhatsApp Image 2026-02-01 at 13.34.02.jpeg" id="2_qsijh"]
+[ext_resource type="FontFile" uid="uid://g0ncr8scepir" path="res://fonts/TipografiaRM.fnt" id="3_qsijh"]
 
 [node name="Menu principal" type="Control" unique_id=2099287387]
 process_mode = 3
@@ -42,11 +43,13 @@ theme_override_constants/separation = 15
 
 [node name="jugar" type="Button" parent="VBoxContainer" unique_id=1627862691]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qsijh")
 theme_override_font_sizes/font_size = 64
 text = "PLAY"
 
 [node name="salir" type="Button" parent="VBoxContainer" unique_id=128906904]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qsijh")
 theme_override_font_sizes/font_size = 64
 text = "EXIT"
 
