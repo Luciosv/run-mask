@@ -1,0 +1,41 @@
+info face="TipografiaRM" size=85 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=85 base=85 scaleW=3060 scaleH=85 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="TipografiaRM.png"
+chars count=36
+char id=65   x=0     y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=66   x=85    y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=67   x=170   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=68   x=255   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=69   x=340   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=70   x=425   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=71   x=510   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=72   x=595   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=73   x=680   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=74   x=765   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=75   x=850   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=76   x=935   y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=77   x=1020  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=78   x=1105  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=79   x=1190  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=80   x=1275  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=81   x=1360  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=82   x=1445  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=83   x=1530  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=84   x=1615  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=85   x=1700  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=86   x=1785  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=87   x=1870  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=88   x=1955  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=89   x=2040  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=90   x=2125  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=49   x=2210  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=50   x=2295  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=51   x=2380  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=52   x=2465  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=53   x=2550  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=54   x=2635  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=55   x=2720  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=56   x=2805  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=57   x=2890  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=48   x=2975  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15
+char id=32   x=3060  y=0     width=85    height=85    xoffset=0     yoffset=0     xadvance=85    page=0  chnl=15

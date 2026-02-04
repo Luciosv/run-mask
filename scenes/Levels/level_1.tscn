@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://blbummi6gt5bf"]
 
-[ext_resource type="Script" uid="uid://b6577gxp20buo" path="res://level_1.gd" id="1_ptgt0"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_ptgt0"]
 [ext_resource type="Texture2D" uid="uid://dt0ix3umnjfva" path="res://art/Sprites/Background.png" id="2_xxpsm"]
 [ext_resource type="Texture2D" uid="uid://c8cjqfdjimce5" path="res://art/Sprites/TutorialBGGuide.jpeg" id="3_j85eu"]
 [ext_resource type="Texture2D" uid="uid://okhyvt44jc76" path="res://art/Sprites/Block11.png" id="4_4p1o3"]
@@ -4779,9 +4779,6 @@ size = Vector2(3260.0024, 1137.5012)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lypfi"]
 size = Vector2(3705, 2164)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xxpsm"]
-radius = 66.1211
-
 [node name="Level1" type="Node2D" unique_id=1056673219 node_paths=PackedStringArray("init_level", "limit_level")]
 script = ExtResource("1_ptgt0")
 init_level = NodePath("Init")
@@ -4920,13 +4917,3 @@ shape = SubResource("RectangleShape2D_lypfi")
 
 [node name="Init" type="Marker2D" parent="." unique_id=464425969]
 position = Vector2(190, 960)
-
-[node name="WinArea" type="Area2D" parent="." unique_id=726833549]
-position = Vector2(3572, -646)
-collision_layer = 0
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea" unique_id=2032482372]
-shape = SubResource("CircleShape2D_xxpsm")
-
-[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]

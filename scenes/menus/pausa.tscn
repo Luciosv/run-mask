@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://cfllbgc88x2os"]
 
 [ext_resource type="Script" uid="uid://bw3ghh4xfh80d" path="res://scenes/menus/pausa.gd" id="1_ayxh5"]
+[ext_resource type="FontFile" uid="uid://g0ncr8scepir" path="res://fonts/TipografiaRM.fnt" id="2_elh8p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5pdfw"]
 font_size = 200
-font_color = Color(1, 0.6862745, 0, 1)
-outline_size = 12
-outline_color = Color(0, 0, 0, 1)
+font_color = Color(0.9714295, 0.6578722, 0.23270863, 1)
 
 [node name="pausa" type="Control" unique_id=211869799]
 process_mode = 3
@@ -43,6 +42,7 @@ alignment = 1
 
 [node name="titulo" type="Label" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=347682138]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_elh8p")
 text = "PAUSE"
 label_settings = SubResource("LabelSettings_5pdfw")
 horizontal_alignment = 1
@@ -50,7 +50,8 @@ horizontal_alignment = 1
 [node name="resume" type="Button" parent="ColorRect/PanelContainer/VBoxContainer" unique_id=1936003927]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(16.638432, 16.638432, 16.638432, 1)
+theme_override_colors/font_color = Color(16.637999, 16.637999, 16.637999, 1)
+theme_override_fonts/font = ExtResource("2_elh8p")
 theme_override_font_sizes/font_size = 120
 text = "RESUME
 "
@@ -59,6 +60,7 @@ text = "RESUME
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_elh8p")
 theme_override_font_sizes/font_size = 120
 text = "RESTART"
 
@@ -66,6 +68,7 @@ text = "RESTART"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(16.638432, 16.638432, 16.638432, 1)
+theme_override_fonts/font = ExtResource("2_elh8p")
 theme_override_font_sizes/font_size = 120
 text = "MAIN MENU"
 
